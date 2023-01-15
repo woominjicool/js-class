@@ -1,0 +1,120 @@
+/*reset*/
+*{margin:0;padding:0;}
+ol,ul{list-style:none;}
+a{text-decoration:none;color:#000;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:inherit;}
+i,em{font-style:normal;}
+b,strong{font-weight:normal;}
+table{border-collapse:collapse;}
+
+
+.mainContent{
+    display: flex;
+    /*border:1px solid orange;*/
+    box-sizing: border-box;
+    float: left;
+}
+
+.contetnsWrap{
+    /*border:1px solid red;*/
+    box-sizing: border-box;
+    margin-top: 230px;
+}
+
+.cL{
+    /*border:1px solid blue;*/
+    box-sizing: border-box;
+}
+
+.movieChart{
+    box-sizing: border-box;
+    width:1080px;
+    margin: 20px auto;
+}
+
+.movieChart:after{display: block;content: "";clear: both;}
+
+
+.movieChart > h2{
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.movieChart h2 span{
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 2px solid #ddd;
+    box-sizing: border-box;
+    font-weight: 500;
+    color:#848383;
+}
+
+.movieChart a{
+    border:2px solid #ccc;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0px;
+    border-radius: 20px;
+    padding: 4px 8px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.movieChart ul{
+    box-sizing: border-box;
+    /*width: calc(100% / 5);*/
+}
+
+.movieChart ul li{
+    margin-right: 10px;
+}
+.movieChart ul li:last-of-type{margin-right: 0px;}
+
+
+figure{
+    width:100%;
+    height:300px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+figure img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.conTitle{
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.sign{
+    box-sizing: border-box;
+    text-align: center;
+    border-right:1px solid #ddd;
+    margin-right: 8px;
+}
+
+.sign img{
+    box-sizing: border-box;
+    width:20px;
+    height:20px;
+    position: relative;
+    top: 4px;
+    left: -3px;
+}
+
+.mainconText{
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    text-align: center;
+}
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>숙제</title>
+  </head>
+  <body>
+    <div class="contetnsWrap">
+      <div class="cL">
+        <div class="movieChart">
+          <h2>
+            무비차트<b>상영예정작</b>
+            <a href="#">전체보기</a>
+          </h2>
+          <ul>
+            <script>
+            let title1="아바타-물의 길"
+            let eggPer1=96
+            let reserRate1=44.6
+            let imgSrc1="86072_320.jpg"
+            let list1 = `<li>
+              <figure>
+                <img src="./img/${imgSrc1}" alt="${title1}">
+              </figure>
+              <h3>${title1}</h3>
+              <p>
+                <span class="sign">
+                  <img src="./img/egg.png" alt="에그이미지">
+                  <i class="percent">${eggPer1}</i>%
+                </span>
+                <span class="reserRate">예매율 ${reserRate1}%</span>
+              </p>
+            </li>`
+
+            let title2="방탄소년단: 옛 투 컴 인 시네마"
+            let eggPer2=99
+            let reserRate2=11.8
+            let imgSrc2="86729_320.jpg"
+            let list2 = `<li>
+              <figure>
+                <img src="./img/${imgSrc2}" alt="${title2}">
+              </figure>
+              <h3>${title2}</h3>
+              <p>
+                <span class="sign">
+                  <img src="./img/egg.png" alt="에그이미지">
+                  <i class="percent">${eggPer2}</i>%
+                </span>
+                <span class="reserRate">예매율 ${reserRate2}%</span>
+              </p>
+            </li>`
+
+            document.write(list1)
+            document.write(list2)
+            </script>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

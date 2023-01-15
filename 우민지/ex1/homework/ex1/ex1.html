@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>숙제</title>
+    <link rel="stylesheet" href="./ex1.css">
+  </head>
+  <body>
+    <div class="contetnsWrap">
+      <div class="cL">
+        <div class="movieChart">
+          <h2>
+            무비차트 &nbsp; <strong>|</strong> &nbsp;<b>상영예정작</b>
+            <a href="#">전체보기 > </a>
+          </h2>
+          <ul>
+            <script>
+            let title1="아바타-물의 길"
+            let signPer1=96
+            let reserRate1=44.6
+
+            var movieList = [
+              { name : "아바타-물의 길", img:"./img/86072_320.jpg", rate:"예매율 44.6%" , eggrate:96},
+              { name : "방탄소년단 옛 투 컴", img:"./img/86729_320.jpg", rate:"예매율 12.1%",eggrate:99},
+              { name : "더 퍼스트 슬램덩크", img:"./img/86720_320.jpg", rate:"예매율 12.1%",eggrate:97},
+              { name : "교섭", img:"./img/86157_320.jpg", rate:"예매율 15.9%",eggrate:99},
+              { name : "유령", img:"./img/86719_320.jpg", rate:"예매율 19.8%",eggrate:99},
+            ];
+            let list = ``;
+            
+            for(let i=0 ; i<movieList.length ; i++){
+              list += `<li>
+              <figure>
+                <img src="${movieList[i].img}" alt="${movieList[i].name}">
+              </figure>
+              <h3>${movieList[i].name}</h3>
+              <p>
+                <span class="sign">
+                  <img src="./img/egg.png" alt="에그이미지">
+                  <i class="percent">${movieList[i].eggrate}</i>%
+                </span>
+                &nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;
+                <span class="reserRate">${movieList[i].rate}</span>
+              </p>
+            </li>`
+            }
+
+            
+
+            console.log(typeof(list));
+            // let list1 = `<li>
+            //   <figure>
+            //     <img src="${movieList[0].img}" alt="${movieList[0].name}">
+            //   </figure>
+            //   <h3>${movieList[0].name}</h3>
+            //   <p>
+            //     <span class="sign">
+            //       <img src="./img/egg.png" alt="에그이미지">
+            //       <i class="percent">${movieList[0].eggrate}</i>%
+            //     </span>
+            //     &nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;
+            //     <span class="reserRate">${movieList[0].rate}</span>
+            //   </p>
+            // </li>`+`<li>
+            //   <figure>
+            //     <img src="${movieList[1].img}" alt="${movieList[1].name}">
+            //   </figure>
+            //   <h3>${movieList[1].name}</h3>
+            //   <p>
+            //     <span class="sign">
+            //       <img src="./img/egg.png" alt="에그이미지">
+            //       <i class="percent">${movieList[1].eggrate}</i>%
+            //     </span>
+            //     &nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;
+            //     <span class="reserRate">${movieList[1].rate}</span>
+            //   </p>
+            // </li>`+`<li>
+            //   <figure>
+            //     <img src="${movieList[2].img}" alt="${movieList[2].name}">
+            //   </figure>
+            //   <h3>${movieList[2].name}</h3>
+            //   <p>
+            //     <span class="sign">
+            //       <img src="./img/egg.png" alt="에그이미지">
+            //       <i class="percent">${movieList[2].eggrate}</i>%
+            //     </span>
+            //     &nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;
+            //     <span class="reserRate">${movieList[2].rate}</span>
+            //   </p>
+            // </li>`+
+            // `<li>
+            //   <figure>
+            //     <img src="${movieList[3].img}" alt="${movieList[3].name}">
+            //   </figure>
+            //   <h3>${movieList[3].name}</h3>
+            //   <p>
+            //     <span class="sign">
+            //       <img src="./img/egg.png" alt="에그이미지">
+            //       <i class="percent">${movieList[3].eggrate}</i>%
+            //     </span>
+            //     &nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;
+            //     <span class="reserRate">${movieList[3].rate}</span>
+            //   </p>
+            // </li>`
+
+
+            
+            document.write(list)
+
+
+            </script>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
