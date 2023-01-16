@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숙제</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+
+        *{
+            font-family: 'NotoSans',sans-serif;
+            margin: 0; padding: 0;
+            font-size:14px ;
+        }
+
+        ol,ul{list-style:none;}
+        a{text-decoration:none;color:#000;}
+        h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:inherit;}
+
+        .wrap{
+            max-width: 1200px;
+            margin: 100px auto;
+        }
+        .inputWrap{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+            padding-right: 10px;
+        }
+
+        section{
+            width: 20%;
+            border-bottom:1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+
+        input{
+            outline: transparent;
+            border: transparent;
+            font-size: 20px;
+        }
+
+        .eventList{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .eventList > li{
+            width: calc(100% / 3 );
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        .eventList > li img{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        h1{
+            font-size: 22px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: #151515;
+        }
+
+        p{
+            color: #797979;
+            margin-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<!-- 참고사이트 -->
+<!-- https://www.pearlabyss.com/ko-KR/Board/Media -->
+<!--
+    다음 페이지의 내용을 보고 알맞은 데이터형태를 구성해보시오~!
+    완성시안 및 사이트 참고
+    1태그형태는 아래에 주어진 eventList클래스 안에 적절히 들어갈 수 있도록 자유롭게 구성할 것.
+    2배열과 객체를 적절히 활용하여 데이터를 구성할 것
+    3.innerHTML 를 활용해볼 것
+
+    tip)
+    let a = '';
+    a+='화'
+    a+='이'
+    a+='팅'
+-->
+<div class="wrap">
+    <div class="inputWrap">
+        <section>
+            <input type="text" placeholder="검색어를 입력해주세요">
+            <span class="material-symbols-outlined">search</span>
+        </section>
+    </div>
+    <ul class="eventList">
+        <script>
+            // let a = '';
+            // a+='화'
+            // a+='이'
+            // a+='팅'
+            // console.log(a)
+
+            let gameList = [
+                { name: "(완료) 2021 검은사막 칼페온 연회" , notice:"2021 검은사막 칼페온 연회 안내" , date:"2021.12.11" , img:"./img/2TQCZFPALGNNU3FV20211208173140936.400x225.jpg"} ,
+                { name: "(완료) 2021 검은사막 하이델 연회" , notice:"2021 검은사막 하이델 연회 안내" , date:"2021.06.16" , img:"./img/8ZFI7EBZ90SYZQXB20210616004912323.400x225.jpg"} ,
+                { name: "(완료) 붉은사막 TGA 2020 미디어 브리핑" , notice:"(완료) 붉은사막 TGA 2020 미디어 브리핑 안내" , date:"2020.12.03" , img:"./img/YH2CKU98QXEXHGXX20201203070819220.400x225.jpg"} ,
+                { name: "(완료) 검은사막 PC X Mobile X Console 칼페ON 연회" , notice:"(완료) 검은사막 PC X Mobile X Console 칼페ON 연회 안내" , date:"2020.12.02" , img:"./img/RVLO3S9XH0JCOKXI20201210072211744.400x225.jpg"} ,
+                { name: "(완료) 하이델 연회 AT HOME 진행" , notice:"(완료) 하이델 연회 AT HOME 진행" , date:"2020.05.25" , img:"./img/9J16GDRIM6IJAKK020200909033648859.400x225.jpg"} ,
+                { name: "(완료)섀도우 아레나 릴레이 인터뷰 안내" , notice:"섀도우 아레나 릴레이 인터뷰를 진행합니다." , date:"2020.05.11" , img:"./img/ZR0IQRCAGA0INHMZ20200909033511073.400x225.jpg"} ,
+            ]
+            let list = ``;
+            for (let i = 0; i<gameList.length; i++) {
+                list += `<li>
+                        <a href="">
+                            <img src="${gameList[i].img}" alt="${gameList[i].name}">
+                            <h1>${gameList[i].name}</h1>
+                            <p>${gameList[i].notice}</p>
+                            <p>${gameList[i].date}</p>
+                        </a>
+                    </li>`
+            }
+
+            document.querySelector(".eventList").innerHTML = list;
+
+        </script>
+        <!--                    <li>-->
+        <!--                        <a href=""><img src="./img/2TQCZFPALGNNU3FV20211208173140936.400x225.jpg" alt="칼페온">-->
+        <!--                            <h1>(완료)2021 검은사막 칼페온 연회</h1>-->
+        <!--                            <p>2021 검은사막 칼페온 연회 안내</p>-->
+        <!--                            <p>2021.12.11</p>-->
+        <!--                        </a>-->
+        <!--                    </li>-->
+        <!--                    <li>-->
+        <!--                        <a href=""><img src="./img/2TQCZFPALGNNU3FV20211208173140936.400x225.jpg" alt="칼페온">-->
+        <!--                            <h1>(완료)2021 검은사막 칼페온 연회</h1>-->
+        <!--                            <p>2021 검은사막 칼페온 연회 안내</p>-->
+        <!--                            <p>2021.12.11</p>-->
+        <!--                        </a>-->
+        <!--                    </li>-->
+        <!--                    <li>-->
+        <!--                        <a href=""><img src="./img/2TQCZFPALGNNU3FV20211208173140936.400x225.jpg" alt="칼페온">-->
+        <!--                            <h1>(완료)2021 검은사막 칼페온 연회</h1>-->
+        <!--                            <p>2021 검은사막 칼페온 연회 안내</p>-->
+        <!--                            <p>2021.12.11</p>-->
+        <!--                        </a>-->
+        <!--                    </li>-->
+        <!--                    <li>-->
+        <!--                        <a href=""><img src="./img/2TQCZFPALGNNU3FV20211208173140936.400x225.jpg" alt="칼페온">-->
+        <!--                            <h1>(완료)2021 검은사막 칼페온 연회</h1>-->
+        <!--                            <p>2021 검은사막 칼페온 연회 안내</p>-->
+        <!--                            <p>2021.12.11</p>-->
+        <!--                        </a>-->
+        <!--                    </li>-->
+        <!--                    <li>-->
+        <!--                        <a href=""><img src="./img/2TQCZFPALGNNU3FV20211208173140936.400x225.jpg" alt="칼페온">-->
+        <!--                            <h1>(완료)2021 검은사막 칼페온 연회</h1>-->
+        <!--                            <p>2021 검은사막 칼페온 연회 안내</p>-->
+        <!--                            <p>2021.12.11</p>-->
+        <!--                        </a>-->
+        <!--                    </li>-->
+        <!--                    <li>-->
+        <!--                        <a href=""><img src="./img/2TQCZFPALGNNU3FV20211208173140936.400x225.jpg" alt="칼페온">-->
+        <!--                            <h1>(완료)2021 검은사막 칼페온 연회</h1>-->
+        <!--                            <p>2021 검은사막 칼페온 연회 안내</p>-->
+        <!--                            <p>2021.12.11</p>-->
+        <!--                        </a>-->
+        <!--                    </li>-->
+    </ul>
+</div>
+
+</body>
+</html>
